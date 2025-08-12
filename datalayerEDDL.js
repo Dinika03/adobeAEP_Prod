@@ -16,9 +16,9 @@ function updatebuttonclick(id){
   ];*/ 
   //idsToTrack.forEach(id => {
     
-
+  console.log(id);
     const el = id;
-     let type = el.tagName.toLowerCase();
+     let type = el.tagName;
         
         // Conditional: change "a" to "link"
         if (type === "a") {
