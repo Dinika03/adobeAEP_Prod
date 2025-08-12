@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function updatebuttonclick(id){
     
   console.log(id);
-    const el = document.getElementbyId(id);
+    const el = document.getElementById(id);
      let type = el.tagName.toLowerCase();
         
         // Conditional: change "a" to "link"
