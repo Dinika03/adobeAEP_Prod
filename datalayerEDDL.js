@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 function updatebuttonclick(){
 const idsToTrack = [
-    "buttonclick"
+    "cta"
   ];
 
  idsToTrack.forEach(id => {
