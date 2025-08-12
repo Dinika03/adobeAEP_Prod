@@ -31,7 +31,7 @@ const idsToTrack = [
         window.EDDLdataLayer.push({
           event: "cta",
           eventInfo: {
-            eventName: type +" click "+ (el.textContent || el.innerText || "").trim(),
+            eventName: type +" click - "+ (el.textContent || el.innerText || "").trim().toLowerCase(),
             eventAction: type,
             eventType: "click",
             eventText: (el.textContent || el.innerText || "").trim()
