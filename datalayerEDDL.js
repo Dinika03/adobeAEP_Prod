@@ -11,12 +11,14 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 function updatebuttonclick(){
-const idsToTrack = [
+/*const idsToTrack = [
     "cta"
-  ];
+  ];*/ 
+  //idsToTrack.forEach(id => {
+    
+    document.getElementById('cta').addEventListener('click', function(e) {
 
- idsToTrack.forEach(id => {
-    const el = document.getElementById(id);
+    const el = document.getElementById('cta');
      let type = el.tagName.toLowerCase();
         
         // Conditional: change "a" to "link"
