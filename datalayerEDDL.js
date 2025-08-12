@@ -17,13 +17,25 @@ const idsToTrack = [
 
  idsToTrack.forEach(id => {
     const el = document.getElementById(id);
+     let type = el.tagName.toLowerCase();
+        
+        // Conditional: change "a" to "link"
+        if (type === "a") {
+          type = "link";
+        }
+         else{
+           type ="button"
+         }
     console.log(el);
     if (el) {
         window.EDDLdataLayer.push({
-          event: "click",
-          eventType: el.tagName.toLowerCase(),
-          id: id,
-          eventText: (el.textContent || el.innerText || "").trim()
+          event: "cta",
+          eventInfo: {
+            eventName: type +" click "+ (el.textContent || el.innerText || "").trim(),
+            eventAction: type,
+            eventType: "click",
+            eventText: (el.textContent || el.innerText || "").trim()
+          }
         });
     
     }
