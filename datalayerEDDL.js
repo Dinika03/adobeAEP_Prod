@@ -11,4 +11,21 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+const idsToTrack = [
+    "buttonclick"
+  ];
 
+ idsToTrack.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("click", function() {
+        pushDigitalDataEvent({
+          event: "click",
+          eventType: el.tagName.toLowerCase(),
+          id: id,
+          eventText: (el.textContent || el.innerText || "").trim()
+        });
+      });
+    }
+  });
+});
