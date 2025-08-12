@@ -32,7 +32,7 @@ function updatebuttonclick(id){
         window.EDDLdataLayer.push({
           event: "cta",
           eventInfo: {
-            eventName: type +" click - "+ (el.textContent || el.innerText || "").trim().toLowerCase(),
+            eventName: type +" click - "+ (el.textContent || el.innerText || "").trim(),
             eventAction: type,
             eventType: "click",
             eventText: (el.textContent || el.innerText || "").trim()
