@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
    
   });
 });
-
+function updatebuttonclick(){
 const idsToTrack = [
     "buttonclick"
   ];
@@ -19,14 +19,14 @@ const idsToTrack = [
     const el = document.getElementById(id);
     console.log(el);
     if (el) {
-      el.addEventListener("click", function() {
         window.EDDLdataLayer.push({
           event: "click",
           eventType: el.tagName.toLowerCase(),
           id: id,
           eventText: (el.textContent || el.innerText || "").trim()
         });
-      });
+    
     }
   });
+}
 
