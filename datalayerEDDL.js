@@ -11,14 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 function updatebuttonclick(id){
-/*const idsToTrack = [
-    "cta"
-  ];*/ 
-  //idsToTrack.forEach(id => {
     
   console.log(id);
-    const el = id;
-     let type = el.tagName;
+    const el = document.getElementbyId(id);
+     let type = el.tagName.toLowerCase();
         
         // Conditional: change "a" to "link"
         if (type === "a") {
@@ -32,7 +28,7 @@ function updatebuttonclick(id){
         window.EDDLdataLayer.push({
           event: "cta",
           eventInfo: {
-            eventName: type +" click - "+ (el.textContent || el.innerText || "").trim(),
+            eventName: type +" click - "+ (el.textContent || el.innerText || "").trim().toLowerCase(),
             eventAction: type,
             eventType: "click",
             eventText: (el.textContent || el.innerText || "").trim()
