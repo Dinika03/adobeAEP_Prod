@@ -19,7 +19,7 @@ const idsToTrack = [
     const el = document.getElementById(id);
     if (el) {
       el.addEventListener("click", function() {
-        pushDigitalDataEvent({
+        window.EDDLdataLayer.push({
           event: "click",
           eventType: el.tagName.toLowerCase(),
           id: id,
