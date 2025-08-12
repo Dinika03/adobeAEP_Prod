@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", function() {
    
   });
 });
-function updatebuttonclick(){
+function updatebuttonclick(id){
 /*const idsToTrack = [
     "cta"
   ];*/ 
   //idsToTrack.forEach(id => {
     
 
-    const el = document.getElementById('cta');
+    const el = id;
      let type = el.tagName.toLowerCase();
         
         // Conditional: change "a" to "link"
