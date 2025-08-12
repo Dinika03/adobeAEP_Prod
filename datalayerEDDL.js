@@ -17,6 +17,7 @@ const idsToTrack = [
 
  idsToTrack.forEach(id => {
     const el = document.getElementById(id);
+    console.log(el);
     if (el) {
       el.addEventListener("click", function() {
         window.EDDLdataLayer.push({
