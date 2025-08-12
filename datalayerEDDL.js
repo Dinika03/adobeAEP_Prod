@@ -16,7 +16,6 @@ function updatebuttonclick(){
   ];*/ 
   //idsToTrack.forEach(id => {
     
-    document.getElementById('cta').addEventListener('click', function(e) {
 
     const el = document.getElementById('cta');
      let type = el.tagName.toLowerCase();
@@ -41,6 +40,6 @@ function updatebuttonclick(){
         });
     
     }
-  });
+
 }
 
