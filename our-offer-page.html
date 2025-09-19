@@ -63,8 +63,8 @@
             data-thq="thq-navbar"
             class="our-offer-page-navbar-interactive"
           >
-            <div class="our-offer-page-branding1">
-              <a href="index.html" class="our-offer-page-navlink1">
+            <div class="our-offer-page-branding1" >
+              <a href="index.html" class="our-offer-page-navlink1" id="cta" onclick="updatebuttonclick(this.id)">
                 Remarkable
               </a>
               <svg viewBox="0 0 1024 1024" class="our-offer-page-icon10">
@@ -78,12 +78,12 @@
               class="our-offer-page-desktop-menu"
             >
               <nav class="our-offer-page-links1">
-                <button class="our-offer-page-button1 button" id="buttonclick">
+                <button class="our-offer-page-button1 button" id="cta_1" onclick="updatebuttonclick(this.id)">
                   <a href="our-offer-page.html" class="our-offer-page-navlink2">
                     Our offers
                   </a>
                 </button>
-                <button class="our-offer-page-button2 button" id="buttonclick">
+                <button class="our-offer-page-button2 button" id="cta_2" onclick="updatebuttonclick(this.id)">
                   <a href="get-quote-form-page.html" class="home-navlink3">
                     Get a fast quote
                   </a>
@@ -119,10 +119,10 @@
                 </div>
               </div>
               <nav class="our-offer-page-links2">
-                <button class="our-offer-page-button4 button">
+                <button class="our-offer-page-button4 button" id="cta_3" onclick="updatebuttonclick(this.id)">
                   <span>Our offers</span>
                 </button>
-                <button class="our-offer-page-button5 button">
+                <button class="our-offer-page-button5 button" id="cta_4" onclick="updatebuttonclick(this.id)">
                   <span>Get a fast quote</span>
                 </button>
                 <button class="our-offer-page-button6 button">Menu</button>
@@ -189,14 +189,14 @@
                 </p>
               </div>
               <div class="hero17-actions">
-                <button class="thq-button-filled hero17-button1">
+                <button class="thq-button-filled hero17-button1" id="cta_5" onclick="updatebuttonclick(this.id)">
                   <span class="thq-body-small">
                     <fragment class="our-offer-page-fragment11">
                       <span class="our-offer-page-text107">Main action</span>
                     </fragment>
                   </span>
                 </button>
-                <button class="thq-button-outline hero17-button2">
+                <button class="thq-button-outline hero17-button2" id="cta_6" onclick="updatebuttonclick(this.id)">
                   <span class="thq-body-small">
                     <fragment class="our-offer-page-fragment10">
                       <span class="our-offer-page-text106">
@@ -460,7 +460,7 @@
             </div>
           </div>
         </features24-wrapper>
-        <a href="get-quote-form-page.html" class="our-offer-page-navlink3">
+        <a href="get-quote-form-page.html" class="our-offer-page-navlink3" id="cta_6" onclick="updatebuttonclick(this.id)">
           <cta26-wrapper class="our-offer-page-component3">
             <!--CTA26 component-->
             <div class="thq-section-padding">
@@ -488,7 +488,8 @@
                       <div class="cta26-actions">
                         <button
                           type="button"
-                          class="thq-button-filled cta26-button"
+                          class="thq-button-filled cta26-button" 
+                          id="cta_7" onclick="updatebuttonclick(this.id)"
                         >
                           <span>
                             <fragment class="our-offer-page-fragment22">
@@ -601,7 +602,7 @@
             </div>
           </div>
         </features25-wrapper>
-        <a href="get-quote-form-page.html" class="our-offer-page-navlink4">
+        <a href="get-quote-form-page.html" class="our-offer-page-navlink4" id="cta_8" onclick="updatebuttonclick(this.id)">
           <pricing14-wrapper class="our-offer-page-component5">
             <!--Pricing14 component-->
             <div class="pricing14-pricing23 thq-section-padding">
@@ -633,21 +634,25 @@
                 <div class="pricing14-tabs">
                   <button
                     class="pricing14-button10 thq-button-animated thq-button-filled"
+                    id="cta_9" onclick="updatebuttonclick(this.id)"
                   >
                     <span class="thq-body-small">Monthly</span>
                   </button>
                   <button
                     class="pricing14-button11 thq-button-outline thq-button-animated"
+                    id="cta_10" onclick="updatebuttonclick(this.id)"
                   >
                     <span class="thq-body-small">Monthly</span>
                   </button>
                   <button
                     class="pricing14-button12 thq-button-animated thq-button-filled"
+                    id="cta_11" onclick="updatebuttonclick(this.id)"
                   >
                     <span class="thq-body-small">Yearly</span>
                   </button>
                   <button
                     class="pricing14-button13 thq-button-outline thq-button-animated"
+                    id="cta_12" onclick="updatebuttonclick(this.id)"
                   >
                     <span class="thq-body-small">Yearly</span>
                   </button>
@@ -725,6 +730,7 @@
                     </div>
                     <button
                       class="pricing14-button14 thq-button-outline thq-button-animated"
+                      id="cta_13" onclick="updatebuttonclick(this.id)"
                     >
                       <span class="thq-body-small">
                         <fragment class="our-offer-page-fragment32">
@@ -821,6 +827,7 @@
                     </div>
                     <button
                       class="pricing14-button15 thq-button-animated thq-button-filled"
+                      id="cta_14" onclick="updatebuttonclick(this.id)"
                     >
                       <span class="thq-body-small">
                         <fragment class="our-offer-page-fragment44">
@@ -929,6 +936,7 @@
                     </div>
                     <button
                       class="pricing14-button16 thq-button-animated thq-button-filled"
+                      id="cta_15" onclick="updatebuttonclick(this.id)"
                     >
                       <span class="thq-body-small">
                         <fragment class="our-offer-page-fragment30">
@@ -1011,6 +1019,7 @@
                     </div>
                     <button
                       class="pricing14-button17 thq-button-outline thq-button-animated"
+                      id="cta_16" onclick="updatebuttonclick(this.id)"
                     >
                       <span class="thq-body-small">
                         <fragment class="our-offer-page-fragment43">
@@ -1105,6 +1114,7 @@
                     </div>
                     <button
                       class="pricing14-button18 thq-button-animated thq-button-filled"
+                      id="cta_16" onclick="updatebuttonclick(this.id)"
                     >
                       <span class="thq-body-small">
                         <fragment class="our-offer-page-fragment50">
