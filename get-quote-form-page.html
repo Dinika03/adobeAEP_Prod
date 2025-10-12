@@ -222,7 +222,34 @@
                       </span>
                     </div>
                   </div>
-                  <form class="thq-card">
+                  <form class="thq-card" id="getQuoteForm">
+                      <script>
+                          document.getElementById('getQuoteForm').addEventListener('submit', function(event) {
+                          event.preventDefault(); // Prevent default browser form submission
+                          
+                            // Collect values from the form fields
+                            const payload = {
+                              RemarketName: document.getElementById('contact-form-3-name').value,
+                              RemarketEmail: document.getElementById('contact-form-3-email').value,
+                              RemarketMessage: document.getElementById('contact-form-3-message').value
+                            };
+                          
+                            // Send data to Power Automate endpoint
+                            fetch('https://defaulte0793d390939496db129198edd916f.eb.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/a4120e04f9934c76a7f361103c079d4b/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=16xJec5fxQfhGAzgeJJn_Hi-X7V474OFd_FcHO_VeF8', {
+                              method: 'POST',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify(payload)
+                            }).then(response => {
+                              if (response.ok) {
+                                alert('Your quote request has been submitted!');
+                                document.getElementById('getQuoteForm').reset();
+                              } else {
+                                alert('Submission failed. Please try again.');
+                              }
+                            });
+                          });
+                    </script>
+
                     <div class="contact-form3-input1">
                       <label for="contact-form-3-name" class="thq-body-small">
                         Name
