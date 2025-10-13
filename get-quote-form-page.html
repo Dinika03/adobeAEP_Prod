@@ -235,17 +235,15 @@
                           
                                fetch(scriptURL, {
 								    method: 'POST',
+								   	mode: 'no-cors',
 								    headers: { 'Content-Type': 'application/json' },
 								    body: JSON.stringify(formData)
 								  })
-								  .then(response => response.json())
-								  .then(result => {
-								    alert('Form submitted successfully!');
-								    form.reset();
-								  })
-								  .catch(error => {
-								    alert('Error submitting form: ' + error);
-								  });
+								 .then(() => {
+									 form.reset();
+									 alert('Form submitted (no-cors).');
+								 })
+								.catch(err => alert('Error: '+err));
 						});
                      </script> 
                     <div class="contact-form3-input1">
