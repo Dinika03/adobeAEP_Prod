@@ -228,17 +228,17 @@
                             document.getElementById('getQuoteForm').addEventListener('submit', function(e) {
                             e.preventDefault();
                             const formData = {
-                              RemarketName: e.target.name.value,
-                              RemarketEmail: e.target.email.value,
-                              RemarketMessage: e.target.message.value
-                            };
+								RemarketName: e.target.name.value,
+								RemarketEmail: e.target.email.value,
+								RemarketMessage: e.target.message.value
+							};
                           
                              fetch(scriptURL, {
-                                method: 'POST',
-                                mode: 'no-cors',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify(formData)
-                             })
+								method: 'POST',
+								mode: 'no-cors',
+								headers: { 'Content-Type': 'application/json' },
+								body: JSON.stringify(formData)
+							})
                             .then(response => response.json())
                             .then(data => {
                               alert('Form submitted successfully!');
@@ -248,7 +248,7 @@
                               alert('Error submitting form. Please try again.'+ error);
                             });
                           });
-                          </script> 
+                     </script> 
                     <div class="contact-form3-input1">
                       <label for="contact-form-3-name" class="thq-body-small">
                         Name
@@ -310,7 +310,7 @@
                     >
                       <span class="thq-body-small">
                         <fragment class="get-quote-form-page-fragment11">
-                          <span class="get-quote-form-page-text18">Submit</span>
+                         <span class="get-quote-form-page-text18">Submit</span>
                         </fragment>
                       </span>
                     </button>
