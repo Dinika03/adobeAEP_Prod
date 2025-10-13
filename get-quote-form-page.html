@@ -239,9 +239,9 @@
 								    headers: { 'Content-Type': 'application/json' },
 								    body: JSON.stringify(formData)
 								  })
-								 .then(() => {
-									 
+								 .then(() => { 
 									 alert('Form submitted (no-cors).');
+									 form.reset();
 								 })
 								.catch(err => alert('Error: '+err));
 						});
