@@ -223,32 +223,14 @@
                     </div>
                   </div>
                   <form class="thq-card" id="getQuoteForm">
-                      <script>
-                          document.getElementById('getQuoteForm').addEventListener('submit', function(e) {
-                            e.preventDefault();
-                            var form = e.target;
-                          
-                            fetch('https://script.google.com/macros/s/AKfycbwTYCDvEFovxdX2HCXoWdEn8LzuJjvzh9JY01od2Vdt5sbCEooKMqfFZSLv5eYvVu9b/exec', {
-                              method: 'POST',
-                              body: new FormData(form)
-                            })
-                            .then(response => response.json())
-                            .then(data => {
-                              alert('Form submitted successfully!');
-                              form.reset();
-                            })
-                            .catch(error => {
-                              alert('Error submitting form. Please try again.');
-                            });
-                          });
-                          </script>
-
+                      
                     <div class="contact-form3-input1">
                       <label for="contact-form-3-name" class="thq-body-small">
                         Name
                       </label>
                       <input
                         type="text"
+                        name="name"
                         id="contact-form-3-name"
                         placeholder="Name"
                         class="thq-input"
@@ -260,6 +242,7 @@
                       </label>
                       <input
                         type="email"
+                        name="email"
                         id="contact-form-3-email"
                         required="true"
                         placeholder="Email"
@@ -276,6 +259,7 @@
                       <textarea
                         id="contact-form-3-message"
                         rows="3"
+                        name="message"
                         placeholder="Enter your message"
                         class="thq-input"
                       ></textarea>
@@ -306,6 +290,33 @@
                       </span>
                     </button>
                   </form>
+                  <script>
+                            const scriptURL = "https://script.google.com/macros/s/AKfycbwTYCDvEFovxdX2HCXoWdEn8LzuJjvzh9JY01od2Vdt5sbCEooKMqfFZSLv5eYvVu9b/exec";
+                            document.getElementById('getQuoteForm').addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            const formData = {
+                              RemarketName: e.target.name.value,
+                              RemarketEmail: e.target.email.value,
+                              RemarketMessage: e.target.message.value
+                            }
+                          
+                             fetch(scriptURL, {
+                                method: 'POST',
+                                mode: 'no-cors',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(formData)
+                             })
+                            .then(response => response.json())
+                            .then(data => {
+                              alert('Form submitted successfully!');
+                              form.reset();
+                            })
+                            .catch(error => {
+                              alert('Error submitting form. Please try again.');
+                            });
+                          });
+
+                          </script>
                 </div>
               </div>
             </div>
