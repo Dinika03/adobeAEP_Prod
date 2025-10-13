@@ -233,20 +233,20 @@
 								RemarketMessage: e.target.message.value
 							};
                           
-                             try {
-                              const response = await fetch(scriptURL, {
-                              method: 'POST',
-                              headers: { 'Content-Type': 'application/json' },
-                              body: JSON.stringify(data)
-                            });
-
-                            const result = await response.json();
-                           alert('Form submitted successfully!');
-
-                           } catch (error) {
-                              alert('Error submitting form: ' + error);
-                         }
-                      });
+                               fetch(scriptURL, {
+								    method: 'POST',
+								    headers: { 'Content-Type': 'application/json' },
+								    body: JSON.stringify(data)
+								  })
+								  .then(response => response.json())
+								  .then(result => {
+								    alert('Form submitted successfully!');
+								    form.reset();
+								  })
+								  .catch(error => {
+								    alert('Error submitting form: ' + error);
+								  });
+						});
                      </script> 
                     <div class="contact-form3-input1">
                       <label for="contact-form-3-name" class="thq-body-small">
