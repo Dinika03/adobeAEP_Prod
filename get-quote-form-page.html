@@ -236,7 +236,7 @@
                                fetch(scriptURL, {
 								    method: 'POST',
 								    headers: { 'Content-Type': 'application/json' },
-								    body: JSON.stringify(data)
+								    body: JSON.stringify(formData)
 								  })
 								  .then(response => response.json())
 								  .then(result => {
