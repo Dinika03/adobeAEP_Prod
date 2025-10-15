@@ -38,4 +38,24 @@ function updatebuttonclick(id){
     }
 
 }
+function updateFormSubmissionEvent(id){
+    console.log(id);
+     window.EDDLdataLayer.push({
+          event: "email_submit",
+          eventInfo: {
+            eventName: "email submit - get your quote",
+            eventAction: "email submitted",
+            eventType: "email"
+          }
+   
+    });
+    window.EDDLdataLayer.push({
+          event: "form_complete",
+          eventInfo: {
+            eventName: "form completed - get your quote",
+            eventAction: "form completed",
+            eventType: "form"
+          }
+        });
+}
 
