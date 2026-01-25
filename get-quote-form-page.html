@@ -312,10 +312,14 @@
                         I accept the Terms
                       </label>
                     </div>
+					<script>
+						var el = document.querySelector('#contact-form-3-email');
+						var email = el.value;
+					</script>	
                     <button
                       type="submit"
                       class="contact-form3-button thq-button-filled"
-					  id="cta_3" onclick="updatebuttonclick(this.id)"
+					  id="cta_3" onclick="updatebuttonclick(this.id,email)"
                     >
                       <span class="thq-body-small">
                         <fragment class="get-quote-form-page-fragment11">
