@@ -38,6 +38,37 @@ function updatebuttonclick(id){
     }
 
 }
+function updateSubmitbuttonclick(id,emailIDInput){
+console.log(id);
+  console.log(emailIDInput);
+  const el = document.getElementById(id);  
+  const email = document.querySelector('#contact-form-3-email');
+     let type = el.tagName.toLowerCase();
+        
+        // Conditional: change "a" to "link"
+        if (type === "a") {
+          type = "link";
+        }
+         else{
+           type ="button"
+         }
+    console.log(el);
+    console.log("submit button click"+email);
+    if (el) {
+        window.EDDLdataLayer.push({
+          event: "cta",
+          eventInfo: {
+            eventName: type +" click - "+ (el.textContent || el.innerText || "").trim().toLowerCase(),
+            eventAction: type,
+            eventType: "click",
+            eventText: (el.textContent || el.innerText || "").trim()
+          }
+        });
+    
+    }
+
+
+}
 function updateFormSubmissionEvent(id,email){
     console.log("email entered"+ email);
      window.EDDLdataLayer.push({
