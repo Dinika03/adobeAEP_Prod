@@ -316,7 +316,7 @@
                     <button
                       type="submit"
                       class="contact-form3-button thq-button-filled"
-					  id="cta_3" onclick="updatebuttonclick(this.id)"
+					  id="cta_3" onclick="updateSubmitbuttonclick(this.id,'contact-form-3-email')"
                     >
                       <span class="thq-body-small">
                         <fragment class="get-quote-form-page-fragment11">
@@ -331,9 +331,7 @@
 				  const form = document.getElementById('getQuoteForm');
 				  const loadingMessage = document.getElementById('loadingMessage');
 				  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
-				  const el = document.querySelector('#contact-form-3-email');
-				  const email = el.value;
-				  console.log("testing" + email);		
+					
 				
 				  form.addEventListener('submit', () => {
 				    loadingMessage.style.display = 'block'; // show loading immediately
@@ -341,7 +339,7 @@
 				  });
 				
 				  iframe.onload = function() {
-					updateFormSubmissionEvent(iframe.id, email);
+					updateFormSubmissionEvent(iframe.id);
 					setTimeout(function() {
 					    window.location.href = 'https://remarketabletemplateaepdinika.netlify.app/thank-you-page.html';
 					  }, 1500);
