@@ -53,7 +53,7 @@ console.log(id);
            type ="button"
          }
     console.log(el);
-    console.log("submit button click"+email);
+    console.log("submit button click"+email.value);
     if (el) {
         window.EDDLdataLayer.push({
           event: "cta",
