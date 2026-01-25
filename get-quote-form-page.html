@@ -312,10 +312,7 @@
                         I accept the Terms
                       </label>
                     </div>
-					<script>
-						var el = document.querySelector('#contact-form-3-email');
-						var email = el.value;
-					</script>	
+					
                     <button
                       type="submit"
                       class="contact-form3-button thq-button-filled"
@@ -334,6 +331,8 @@
 				  const form = document.getElementById('getQuoteForm');
 				  const loadingMessage = document.getElementById('loadingMessage');
 				  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+				  const el = document.querySelector('#contact-form-3-email');
+				  const email = el.value;
 				
 				  form.addEventListener('submit', () => {
 				    loadingMessage.style.display = 'block'; // show loading immediately
