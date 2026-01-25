@@ -39,7 +39,7 @@ function updatebuttonclick(id){
 
 }
 function updateFormSubmissionEvent(id,email){
-    console.log("email entered"+email);
+    console.log("email entered"+ email);
      window.EDDLdataLayer.push({
           event: "email_submit",
           eventInfo: {
